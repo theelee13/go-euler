@@ -11,8 +11,8 @@ func main(){
 		last.next = &newLast
 		last = &newLast
 	}
-	for member := first;member.next!=nil;member=*member.next{
-		fmt.Println(member.val)
+	for member := &first;member!=nil;member=member.next{
+		fmt.Println((*member).val)
 	}
 }
 
